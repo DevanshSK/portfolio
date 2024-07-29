@@ -4,6 +4,13 @@
 
 @layer base {
   :root {
+
+    --text: #665a47;
+    --background: #f2f2f2;
+    --primary: #c83514;
+    --secondary: #7b5b28;
+    --accent: #d3870d;
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 
@@ -36,7 +43,15 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+
+    --text: #b8ac99;
+    --background: #0d0d0d;
+    --primary: #eb5837;
+    --secondary: #d7b784;
+    --accent: #f2a62c;
+
+
+    /* --background: 240 10% 3.9%; */
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -45,17 +60,17 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
+    /* --primary: 0 0% 98%; */
     --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 240 3.7% 15.9%;
+    /* --secondary: 240 3.7% 15.9%; */
     --secondary-foreground: 0 0% 98%;
 
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    /* --accent: 240 3.7% 15.9%; */
+    /* --accent-foreground: 0 0% 98%; */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
@@ -86,4 +101,17 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+}
+
+.noise::before{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.1;  
+  z-index: 1000;
+  pointer-events: none;
+  background: url(/noise.gif) ;
 }

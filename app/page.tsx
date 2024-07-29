@@ -21,6 +21,8 @@ export default function Home() {
         {/* <Clients /> */}
         <Experience />
       </div>
+
+      <div className="noise"></div>
     </main>
   );
 }

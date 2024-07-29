@@ -9,11 +9,11 @@ const Experience = () => {
             <span className='text-purple'>Specializations</span>
         </h1>
         <div className="w-full mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10">
-            {workExperience.map((card) => (
+            {/* {workExperience.map((card) => (
                 <Button>
                     
                 </Button>
-            ))}
+            ))} */}
         </div>
     </div>
   )
