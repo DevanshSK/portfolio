@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import Magnetic from '../magnetic';
-import "./RoundedButton.css"
+import gsap from 'gsap';
 
 type Props = {
     children: React.ReactNode;
-    backgroundColor: string;
+    backgroundColor?: string;
     [key: string]: any;
 }
 

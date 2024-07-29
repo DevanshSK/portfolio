@@ -30,8 +30,10 @@ const Magnetic = ({ children }: {
         magnetic.current!.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
-            magnetic.current!.removeEventListener("mousemove", handleMouseMove);
-            magnetic.current!.removeEventListener("mouseleave", handleMouseLeave);
+            if (magnetic.current) {
+                magnetic.current.removeEventListener("mousemove", handleMouseMove);
+                magnetic.current.removeEventListener("mouseleave", handleMouseLeave);
+            }
         };
     }, [children])
 
