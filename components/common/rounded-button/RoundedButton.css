@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .roundedButton {
+        @apply border cursor-pointer relative flex items-center justify-center px-[60px] py-[15px] rounded-[3em] border-solid border-[#888888];
+    }
+
+    .roundedButton p {
+        @apply relative z-[1] transition-[color] duration-[0.4s] ease-linear;
+    }
+
+    .roundedButton:hover p {
+        @apply text-[white];
+    }
+
+}
