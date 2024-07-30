@@ -1,28 +1,30 @@
+import { Variants } from "framer-motion";
+
 interface Transition {
     duration: number;
     ease?: number[];
     delay?: number;
 }
 
-interface Animation {
+interface Animation{
     x?: string | number;
     scale?: number;
     transition?: Transition;
 }
 
-interface MenuSlide {
+interface MenuSlide extends Variants {
     initial: Animation;
     enter: Animation;
     exit: Animation;
 }
 
-interface Slide {
+interface Slide extends Variants {
     initial: Animation;
     enter: (i: number) => Animation;
     exit: (i: number) => Animation;
 }
 
-interface Scale {
+interface Scale extends Variants {
     open: Animation;
     closed: Animation;
 }

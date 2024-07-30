@@ -8,7 +8,7 @@ type Props = {
     [key: string]: any;
 }
 
-const RoundedButton = ({ children, backgroundColor = "#455CE9", ...attributes }: Props) => {
+const RoundedButton = ({ children, backgroundColor = "#eb5837", ...attributes }: Props) => {
     const circle = useRef<HTMLDivElement>(null);
     const timeline = useRef<gsap.core.Timeline | null>(null);
     let timeoutId: NodeJS.Timeout | null = null;

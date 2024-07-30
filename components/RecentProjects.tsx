@@ -30,7 +30,7 @@ const RecentProjects = () => {
                                 </div>
                                 {/* <img src={img} alt={title} className='z-10 absolute bottom-0' /> */}
                                 <Image
-                                    className='z-10 absolute bottom-0'
+                                    className='z-[5] absolute bottom-0'
                                     src={img}
                                     alt={title}
                                     fill
