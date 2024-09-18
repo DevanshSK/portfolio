@@ -3,6 +3,7 @@ import React from 'react'
 import { PinContainer } from './ui/3DPin'
 import { FaLocationArrow } from 'react-icons/fa6'
 import Image from 'next/image'
+import { Cover } from './ui/SparcleText/Cover'
 
 
 const RecentProjects = () => {
@@ -10,7 +11,7 @@ const RecentProjects = () => {
         <div id='projects' className='py-20'>
             <h1 className='heading'>
                 A small selection of {" "}
-                <span className='text-purple'>recent projects</span>
+                <Cover><span className='text-primary'>Recent Projects</span></Cover>
             </h1>
             <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
                 {projects.map(({ id, title, des, img, iconLists, link }) => (

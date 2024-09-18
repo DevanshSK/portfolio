@@ -26,6 +26,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        generalsans: ['General Sans', 'sans-serif'],
+      },
       animationTimingFunction: {
 				"in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
 				"out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
@@ -41,16 +44,31 @@ const config = {
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
 
+        // black: {
+        //   DEFAULT: "#000",
+        //   100: "#0d0d0d",
+        //   200: "rgba(17, 25, 40, 0.75)",
+        //   300: "rgba(255, 255, 255, 0.125)",
+        // },
         black: {
-          DEFAULT: "#000",
-          100: "#0d0d0d",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
+          DEFAULT: '#000',
+          100: '#010103',
+          200: '#0E0E10',
+          300: '#1C1C21',
+          500: '#3A3A49',
+          600: '#1A1A1A',
         },
+        // white: {
+        //   DEFAULT: "#FFF",
+        //   100: "#BEC1DD",
+        //   200: "#C1C2D3",
+        // },
         white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
+          DEFAULT: '#FFFFFF',
+          800: '#E4E4E6',
+          700: '#D6D9E9',
+          600: '#AFB0B6',
+          500: '#62646C',
         },
         blue: {
           "100": "#E4ECFF",

@@ -2,12 +2,15 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/utils/cn";
+import { Cover } from "./SparcleText/Cover";
 
 export const TextGenerateEffect = ({
   words,
+  specialWords,
   className,
 }: {
   words: string;
+  specialWords: string;
   className?: string;
 }) => {
   const [scope, animate] = useAnimate();
@@ -32,12 +35,20 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className={`${idx > 3 ? "text-primary" : "dark:text-white text-black" } opacity-0`}
+              className={"dark:text-white text-black opacity-0"}
             >
               {word}{" "}
             </motion.span>
           );
         })}
+
+        <Cover>
+          <motion.span
+            className={"text-primary"}
+          >
+            {specialWords}
+          </motion.span>
+        </Cover>
       </motion.div>
     );
   };

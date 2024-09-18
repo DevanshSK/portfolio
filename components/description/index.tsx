@@ -11,7 +11,7 @@ const Description = () => {
     const isInView = useInView(description);
 
     return (
-        <div ref={description} className='description md:px-[80px] lg:px-[100px] my-20 md:my-[180px] flex justify-center'>
+        <div ref={description} className='description sm:px-10 px-5 md:px-[80px] lg:px-[100px] mt-20 mb-0 md:mt-[90px] md:mb-[90px] z-10 flex justify-center'>
             <div className="body flex flex-col lg:flex-row max-w-[1440px] gap-[50px] relative">
                 <p className='m-0 text-2xl md:text-[36px] md:leading-snug gap-2'>
                     {

@@ -50,13 +50,13 @@ const PreLoader = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className='introduction h-screen w-screen flex items-center justify-center fixed z-[500] bg-slate'
+            className='introduction h-screen w-screen flex items-center justify-center fixed z-[500] bg-white-800'
         >
             {dimension.width > 0 && 
             <>
-                <motion.p className='flex text-black-100 text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-black-100 rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p>
+                <motion.p className='flex text-black-100 font-generalsans font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-black-100 rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p>
                 <svg className='absolute top-0 w-full h-[calc(100%+300px)]'>
-                    <motion.path className="fill-slate" variants={curve} initial="initial" exit="exit"></motion.path>
+                    <motion.path className="fill-white-800" variants={curve} initial="initial" exit="exit"></motion.path>
                 </svg>
             </>
             }
