@@ -18,7 +18,7 @@ const About = () => {
 
 
     return (
-        <section className='c-space mt-5 mb-20'>
+        <section className='c-space mt-20 mb-20'>
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
 
                 <div className="col-span-1 xl:row-span-3">

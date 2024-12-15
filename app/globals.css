@@ -21,6 +21,19 @@ body {
     --secondary: #7b5b28;
     --accent: #d3870d;
 
+
+    /* NEW COLORS */
+
+    --lightbg: #e5e9f0;
+    --accent-blue: #87bfcf;
+    --blackk: #1b1f23;
+    --darkbg: #2b2f36;
+    --grayAccent: #4d576a;
+
+    /* NEW COLORS */
+
+
+
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
 

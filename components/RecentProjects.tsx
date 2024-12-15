@@ -7,6 +7,7 @@ import { Cover } from './ui/SparcleText/Cover'
 
 
 const RecentProjects = () => {
+    // @ts-ignore
     return (
         <div id='projects' className='py-20'>
             <h1 className='heading'>

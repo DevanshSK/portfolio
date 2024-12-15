@@ -43,6 +43,13 @@ const config = {
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
+        
+        
+        'lightbg': 'var(--lightbg)',
+        'accent-blue': 'var(--accent-blue)',
+        'blackk': 'var(--blackk)',
+        'darkbg': 'var(--darkbg)',
+        'grayAccent': 'var(--grayAccent)',
 
         // black: {
         //   DEFAULT: "#000",

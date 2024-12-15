@@ -44,7 +44,7 @@ export const TextGenerateEffect = ({
 
         <Cover>
           <motion.span
-            className={"text-primary"}
+            className={"text-accent-blue"}
           >
             {specialWords}
           </motion.span>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@gsap/react": "^2.1.1",
     "@react-three/drei": "^9.112.0",
     "@react-three/eslint-plugin": "^0.1.1",
@@ -19,6 +20,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.14",
     "gsap": "^3.12.5",
+    "hamburger-react": "^2.5.1",
     "leva": "^0.9.35",
     "locomotive-scroll": "^4.1.4",
     "mini-svg-data-uri": "^1.4.4",
