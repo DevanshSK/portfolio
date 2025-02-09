@@ -19,6 +19,7 @@ export default function Header() {
     const [isActive, setIsActive] = useState<boolean>(false);
     const pathname = usePathname()
     const button = useRef<HTMLDivElement>(null);
+    const navRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         if (isActive) setIsActive(false);
@@ -37,9 +38,33 @@ export default function Header() {
         });
     }, [])
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            // Check if nav is open and click is outside both nav and button
+            if (isActive && navRef.current && button.current) {
+                const navElement = navRef.current;
+                const buttonElement = button.current;
+                const target = event.target as Node;
+
+                if (!navElement.contains(target) && !buttonElement.contains(target)) {
+                    setIsActive(false);
+                }
+            }
+        };
+
+        // Only add the event listener if the nav is active
+        if (isActive) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isActive]); // Add isActive to dependency array
+
     return (
         <>
-            <div ref={header} className="header absolute flex z-[10] top-0 text-white p-[35px] justify-between w-full font-light box-border items-start">
+            <div ref={header} className="header absolute flex z-[10] top-0 text-white sm:text-black p-[35px] justify-between w-full font-light box-border items-start">
                 <div className="logo group/logo flex cursor-pointer">
                     <p className="copyright group-hover/logo:rotate-[360deg] m-0 transition-all duration-500 ease-nav">&copy;</p>
                     <div className="name group-hover/logo:pr-[55px] flex relative overflow-hidden whitespace-nowrap ml-[5px] transition-all duration-500 ease-nav">
@@ -49,23 +74,23 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div className="nav flex flex-col md:flex-row items-end md:items-center">
+                <div className="nav flex flex-col sm:flex-row items-end sm:items-center">
                     <Magnetic>
-                        <div className="el flex flex-col relative z-[10] p-[2px] md:p-4 cursor-pointer group/el">
-                            <a className="cursor-pointer" href="#about">About</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[45px] left-1/2 bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                        <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
+                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#about">About</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
-                        <div className="el flex flex-col relative z-[10] p-[2px] md:p-4 cursor-pointer group/el">
-                            <a className="cursor-pointer" href="#projects">Work</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[45px] left-1/2 bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                        <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
+                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#projects">Work</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
-                        <div className="el flex flex-col relative z-[10] p-[2px] md:p-4 cursor-pointer group/el">
-                            <a className="cursor-pointer" href="#contact">Contact</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[45px] left-1/2 bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                        <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
+                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#contact">Contact</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     
@@ -74,8 +99,10 @@ export default function Header() {
             <div ref={button} className="header-button-container scale-0 fixed right-0 z-[100]">
                 <RoundedButton onClick={() => {}} 
                 // <RoundedButton onClick={() => {setIsActive(!isActive)}} 
-                    backgroundColor="#87bfcf"
+                    backgroundColor="#00fcfe"
+                    // backgroundColor="#87bfcf"
                     className="button relative m-5 w-20 h-20 rounded-[50%] bg-accent-blue cursor-pointer flex items-center justify-center"
+                    // className="button relative m-5 w-20 h-20 rounded-[50%] bg-accent-blue cursor-pointer flex items-center justify-center"
                 >
                     <div className="z-[50]">
                     <Hamburger toggled={isActive} color="#000000" animateOnMount hideOutline rounded toggle={setIsActive} />
@@ -87,7 +114,7 @@ export default function Header() {
                 </RoundedButton>
             </div>
             <AnimatePresence>
-                {isActive && <Nav />}
+                {isActive && <Nav ref={navRef} />}
             </AnimatePresence>
         </>
     )

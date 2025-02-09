@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, forwardRef} from 'react'
 import {motion} from "framer-motion";
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../animation';
@@ -30,11 +30,12 @@ const navItems: NavItem[] = [
     },
 ]
 
-const Nav = () => {
+const Nav = forwardRef<HTMLDivElement>((props, ref) => {
     const pathname = usePathname();
     const [selectedIndicator, setSelectedIndicator] = useState<string>(pathname);
   return (
     <motion.div
+        ref={ref}
         variants={menuSlide}
         initial="initial"
         animate="enter"
@@ -62,6 +63,8 @@ const Nav = () => {
         <Curve />
     </motion.div>
   )
-}
+});
+
+Nav.displayName = 'Nav';
 
 export default Nav

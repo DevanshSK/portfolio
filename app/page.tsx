@@ -2,7 +2,7 @@
 import Description from "@/components/description";
 // import Experience from "@/components/Experience";
 // import FuzzyOverlay from "@/components/FuzzyFilter";
-import Hero from "@/components/Hero";
+import Hero from "@/components/hero/Hero";
 import PreLoader from "@/components/preloader";
 import About from "@/components/sections/About";
 import Clients from "@/components/sections/Clients";
@@ -46,18 +46,25 @@ export default function Home() {
       </AnimatePresence>
       {/* <main className="relative overflow-hidden flex justify-center items-center flex-col mx-auto"> */}
       <main className="relative overflow-hidden">
+        <Hero />
         <div className="max-w-7xl mx-auto">
-          <Hero />
           {/* <Description /> */}
           <About />
           <Projects />
           <Clients />
-          
+
           <Contact />
           <Footer />
         </div>
 
         {/* <FuzzyOverlay /> */}
+        {/* <ClickSpark
+          sparkColor='#fff'
+          sparkSize={10}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={400}
+        /> */}
       </main>
     </>
   );

@@ -30,10 +30,10 @@ const config = {
         generalsans: ['General Sans', 'sans-serif'],
       },
       animationTimingFunction: {
-				"in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
-				"out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+        "out-expo": "cubic-bezier(0.19, 1, 0.22, 1)",
         "nav": "cubic-bezier(0.76, 0, 0.24, 1)",
-			},
+      },
       transitionDuration: {
         '400': '400ms',
       },
@@ -43,8 +43,8 @@ const config = {
         'primary': 'var(--primary)',
         'secondary': 'var(--secondary)',
         'accent': 'var(--accent)',
-        
-        
+
+
         'lightbg': 'var(--lightbg)',
         'accent-blue': 'var(--accent-blue)',
         'blackk': 'var(--blackk)',
@@ -121,6 +121,11 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        gradient: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -196,6 +201,7 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        gradient: 'gradient 8s linear infinite',
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },

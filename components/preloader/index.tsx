@@ -17,8 +17,8 @@ const PreLoader = () => {
         height: window.innerHeight,
     });
 
-    useEffect( () => {
-        setDimension({width: window.innerWidth, height: window.innerHeight})
+    useEffect(() => {
+        setDimension({ width: window.innerWidth, height: window.innerHeight })
     }, [])
 
     useEffect(() => {
@@ -35,11 +35,11 @@ const PreLoader = () => {
     const curve = {
         initial: {
             d: initialPath,
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1]}
+            transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] }
         },
         exit: {
             d: targetPath,
-            transition: {duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3}
+            transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 }
         }
     }
 
@@ -50,16 +50,21 @@ const PreLoader = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className='introduction h-screen w-screen flex items-center justify-center fixed z-[500] bg-lightbg'
+            className='introduction h-screen w-screen flex items-center justify-center fixed z-[500] bg-black'
+        // className='introduction h-screen w-screen flex items-center justify-center fixed z-[500] bg-lightbg'
         >
-            {dimension.width > 0 && 
-            <>
-                <motion.p className='flex text-blackk font-mono font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-blackk rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p>
-                {/* <motion.p className='flex text-blackk font-generalsans font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-blackk rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p> */}
-                <svg className='absolute top-0 w-full h-[calc(100%+300px)]'>
-                    <motion.path className="fill-lightbg" variants={curve} initial="initial" exit="exit"></motion.path>
-                </svg>
-            </>
+            {dimension.width > 0 &&
+                <>
+                    <motion.p className='flex text-accent-blue font-mono font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-accent-blue rounded-[50px] mr-[10px]'></span>
+                        {words[index]}
+                    </motion.p>
+                    {/* <motion.p className='flex text-accent-blue font-mono font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-accent-blue rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p> */}
+                    {/* <motion.p className='flex text-blackk font-generalsans font-normal text-[42px] items-center absolute z-[1500]' variants={opacity} initial="initial" animate="enter" exit="exit" ><span className='block w-[10px] h-[10px] bg-blackk rounded-[50px] mr-[10px]'></span>{words[index]}</motion.p> */}
+                    <svg className='absolute top-0 w-full h-[calc(100%+300px)]'>
+                        <motion.path className="fill-black" variants={curve} initial="initial" exit="exit"></motion.path>
+                        {/* <motion.path className="fill-lightbg" variants={curve} initial="initial" exit="exit"></motion.path> */}
+                    </svg>
+                </>
             }
         </motion.div>
     )

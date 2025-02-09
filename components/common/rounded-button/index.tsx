@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Magnetic from '../magnetic';
 import gsap from 'gsap';
+import IridescenceBg from '@/components/hero/IridescenceBg';
 
 type Props = {
     children: React.ReactNode;
@@ -42,7 +43,8 @@ const RoundedButton = ({ children, backgroundColor = "#eb5837", ...attributes }:
                 {...attributes}
             >
                 {children}
-                <div ref={circle} style={{ backgroundColor }} className="circle w-full h-[150%] absolute rounded-[50%] top-full"></div>
+                <div ref={circle} style={{ backgroundColor }} className="circle w-full h-[150%] absolute rounded-[50%] top-full">
+                </div>
             </div>
         </Magnetic>
     )
