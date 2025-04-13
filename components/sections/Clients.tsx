@@ -1,11 +1,16 @@
 import { clientReviews } from "@/data";
 import Image from "next/image";
+import TitleHeader from "../common/title-header";
 
 
 const Clients = () => {
   return (
     <section className="c-space my-20">
-      <h3 className="head-text">Hear from My Clients</h3>
+      {/* <h3 className="head-text">Hear from My Clients</h3> */}
+      <TitleHeader
+        title='What People Say About Me?'
+        sub='⭐️ Customer feedback highlights'
+      />
 
       <div className="client-container">
         {clientReviews.map((item) => (
@@ -16,7 +21,7 @@ const Clients = () => {
               <div className="client-content">
                 <div className="flex gap-3">
                   {/* <img src={item.img} alt="reviewer" className="w-12 h-12 rounded-full" /> */}
-                  <Image 
+                  <Image
                     src={item.img}
                     alt="reviewer"
                     width={48}
@@ -32,12 +37,12 @@ const Clients = () => {
                 <div className="flex self-end items-center gap-2">
                   {Array.from({ length: 5 }).map((_, index) => (
                     // <img key={index} src="/assets/star.png" alt="star" className="w-5 h-5" />
-                    <Image 
-                        key={index}
-                        src="/assets/star.png"
-                        alt="star"
-                        width={20}
-                        height={20}
+                    <Image
+                      key={index}
+                      src="/assets/star.png"
+                      alt="star"
+                      width={20}
+                      height={20}
                     />
                   ))}
                 </div>

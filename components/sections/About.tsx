@@ -23,7 +23,7 @@ const About = () => {
 
     return (
         <div id="about">
-            <section className='c-space pt-10 mt-10 mb-20' >
+            <section className='c-space pt-10 mt-10 px-5 md:px-20 py-10 md:py-20' >
                 {/* <section className='c-space mt-20 mb-20' > */}
                 <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
 
@@ -176,7 +176,8 @@ const About = () => {
                                     src="/assets/grid4.png"
                                     alt="grid-4"
                                     fill
-                                    className="object-cover sm:object-top"
+                                    className="object-contain md:object-cover sm:object-top"
+                                    // className="object-cover sm:object-top"
                                 />
                             </div>
 

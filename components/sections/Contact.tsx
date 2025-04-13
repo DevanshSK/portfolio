@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
+import TitleHeader from '../common/title-header';
 
 interface FormType {
     name: string;
@@ -19,16 +20,16 @@ const Contact = () => {
     });
 
     const handleChange = ({ target: { name, value } }: { target: { name: string; value: string; } }) => {
-        setForm({...form, [name]: value});
+        setForm({ ...form, [name]: value });
     }
 
-    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
 
         try {
             await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string, 
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
                 process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
                 {
                     from_name: form.name,
@@ -58,7 +59,7 @@ const Contact = () => {
             });
         }
 
-        
+
         // service_y29kv6b
 
     }
@@ -66,6 +67,10 @@ const Contact = () => {
 
     return (
         <section className='c-space my-20' id="contact">
+            <TitleHeader
+                title="Get in Touch – Let’s Connect"
+                sub="💬 Have questions or ideas? Let’s talk! 🚀"
+            />
             <div className="relative min-h-screen flex items-center flex-col">
                 <img
                     src="/assets/terminal.png"
@@ -90,16 +95,16 @@ const Contact = () => {
                         life, I’m here to help.
                     </p>
 
-                    <form 
-                        ref={formRef} 
+                    <form
+                        ref={formRef}
                         onSubmit={handleSubmit}
                         className='mt-3 sm:mt-6 lg:mt-9 xl:mt-12 flex flex-col space-y-7'
                     >
-                        <label 
+                        <label
                             className='space-y-3'
                         >
                             <span className='field-label'>Full Name</span>
-                            <input 
+                            <input
                                 type='text'
                                 name='name'
                                 value={form.name}
@@ -109,11 +114,11 @@ const Contact = () => {
                                 placeholder='John Doe'
                             />
                         </label>
-                        <label 
+                        <label
                             className='space-y-3'
                         >
                             <span className='field-label'>Full Name</span>
-                            <input 
+                            <input
                                 type='email'
                                 name='email'
                                 value={form.email}
@@ -123,11 +128,11 @@ const Contact = () => {
                                 placeholder='john@doe.com'
                             />
                         </label>
-                        <label 
+                        <label
                             className='space-y-3'
                         >
                             <span className='field-label'>Your Message</span>
-                            <textarea 
+                            <textarea
                                 name='message'
                                 value={form.message}
                                 onChange={handleChange}
@@ -141,11 +146,11 @@ const Contact = () => {
                         <button className='field-btn' type='submit' disabled={loading}>
                             {loading ? "Sending..." : "Send Message"}
                             {/* <img src="/assets/arrow-up.png" alt="Arrow-up" className='field-btn_arrow' /> */}
-                            <Image 
+                            <Image
                                 src="/assets/arrow-up.png" alt="Arrow-up"
                                 width={16}
                                 height={16}
-                                
+
                                 className='field-btn_arrow'
                             />
                         </button>

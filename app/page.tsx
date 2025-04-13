@@ -4,7 +4,7 @@ import PreLoader from "@/components/preloader";
 import About from "@/components/sections/About";
 import Clients from "@/components/sections/Clients";
 import Contact from "@/components/sections/Contact";
-import Experience from "@/components/sections/experience/Experience";
+// import Experience from "@/components/sections/experience/Experience";
 import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/Projects";
 import { AnimatePresence } from "framer-motion";
