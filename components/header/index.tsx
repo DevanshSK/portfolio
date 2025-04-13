@@ -86,7 +86,7 @@ export default function Header() {
                     <div className="name group-hover/logo:pr-[55px] flex relative overflow-hidden whitespace-nowrap ml-[5px] transition-all duration-500 ease-nav">
                         <p className="code-by group-hover/logo:-translate-x-full relative transition-all duration-500 ease-nav sm:font-medium">Code by</p>
                         <p className="devansh group-hover/logo:-translate-x-[65px] relative transition-all duration-500 ease-nav pl-[0.3em] sm:font-medium">Devansh</p>
-                        <p className="singh-kushwah group-hover/logo:-translate-x-[65px] absolute transition-all duration-500 ease-nav left-[130px] sm:font-medium">Singh Kushwah</p>
+                        <p className="singh-kushwah group-hover/logo:-translate-x-[62px] absolute transition-all duration-500 ease-nav left-[130px] sm:font-medium">Singh Kushwah</p>
                     </div>
                 </div>
 

@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {/* {isLoading && <PreLoader />} */}
+        {isLoading && <PreLoader />}
       </AnimatePresence>
       {/* <main className="relative overflow-hidden flex justify-center items-center flex-col mx-auto"> */}
       <main className="relative overflow-hidden">

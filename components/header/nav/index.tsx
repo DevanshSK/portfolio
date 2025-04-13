@@ -51,7 +51,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(({closeNav}, ref) => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className='menu h-screen bg-black w-full max-w-lg fixed right-0 top-0 text-black z-[90]'
+            className='menu h-screen bg-[#282732] w-full max-w-lg fixed right-0 top-0 text-accent-blue z-[90]'
             // className='menu h-screen bg-lightbg w-full max-w-lg fixed right-0 top-0 text-black z-[90]'
         >
             <div className="body box-border h-full p-16 sm:p-[100px] flex flex-col justify-between">

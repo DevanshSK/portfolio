@@ -36,7 +36,7 @@ const About = () => {
 
                             <div className="">
                                 <p className='grid-headtext'>Hi, I&apos;m Devansh</p>
-                                <p className="grid-subtext">Throughout my development journey, I have honed my skills in Frontend, Backend and Mobile development, with a focus on scalable solutions for real world problems.</p>
+                                <p className="grid-subtext">My development philosophy is simple. Create solutions that work brilliantly while looking beautiful. I&apos;ve honed my skills across the entire development spectrum to deliver products users love interacting with.</p>
                             </div>
                         </div>
                     </div>
