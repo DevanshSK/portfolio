@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='footer flex w-full justify-start text-sm gap-10'>
+    <div className='footer flex w-full text-accent-blue justify-start text-sm gap-10'>
       <Link href="https://github.com/DevanshSK">Github</Link>
       <Link href="">Instagram</Link>
       <Link href="https://www.linkedin.com/in/devanshsk/">LinkedIn</Link>

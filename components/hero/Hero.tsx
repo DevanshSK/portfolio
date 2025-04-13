@@ -1,12 +1,10 @@
-import { TextGenerateEffect } from '../ui/TextGenerateEffect'
-import Button from '../elements/Button'
 import MobileRight from './MobileRight'
 import IridescenceBg from './IridescenceBg'
 import HeroContent from './HeroContent'
 
 const Hero = () => {
     return (
-        <div className='pb-4 sm:pb-[2.5vh] pt-20 sm:pt-[2.5vh] flex flex-col h-screen px-5 sm:px-2 min-h-screen'>
+        <div id='home' className='pb-4 sm:pb-[1.5vh] pt-20 sm:pt-[1.5vh] flex flex-col h-screen px-5 sm:px-2 min-h-screen'>
         {/* <div className='pb-4 sm:pb-16 pt-20 sm:pt-20 flex flex-col h-screen sm:px-10 px-5 min-h-screen'> */}
             <div className="relative flex-1">
                 

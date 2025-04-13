@@ -21,6 +21,22 @@ export default function Header() {
     const button = useRef<HTMLDivElement>(null);
     const navRef = useRef<HTMLDivElement>(null);
 
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        const element = document.getElementById(targetId);
+        console.log("Element clicked")
+        if(element){
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }
+
+    const closeNav = () => {
+        setIsActive(false);
+    }
+
     useEffect(() => {
         if (isActive) setIsActive(false);
     }, [pathname]);
@@ -64,33 +80,34 @@ export default function Header() {
 
     return (
         <>
-            <div ref={header} className="header absolute flex z-[10] top-0 text-white sm:text-black p-[35px] justify-between w-full font-light box-border items-start">
-                <div className="logo group/logo flex cursor-pointer">
-                    <p className="copyright group-hover/logo:rotate-[360deg] m-0 transition-all duration-500 ease-nav">&copy;</p>
+            <div ref={header} className="header absolute flex z-[10] top-0 text-white sm:text-black p-[35px] pt-[30px] sm:py-[19px] sm:pr-[16px] justify-between w-full font-light box-border items-start">
+                <div className="logo group/logo flex cursor-pointer sm:my-4">
+                    <p className="copyright group-hover/logo:rotate-[360deg] m-0 transition-all duration-500 ease-nav sm:font-medium">&copy;</p>
                     <div className="name group-hover/logo:pr-[55px] flex relative overflow-hidden whitespace-nowrap ml-[5px] transition-all duration-500 ease-nav">
-                        <p className="code-by group-hover/logo:-translate-x-full relative transition-all duration-500 ease-nav">Code by</p>
-                        <p className="devansh group-hover/logo:-translate-x-[65px] relative transition-all duration-500 ease-nav pl-[0.3em]">Devansh</p>
-                        <p className="singh-kushwah group-hover/logo:-translate-x-[65px] absolute transition-all duration-500 ease-nav left-[130px] ">Singh Kushwah</p>
+                        <p className="code-by group-hover/logo:-translate-x-full relative transition-all duration-500 ease-nav sm:font-medium">Code by</p>
+                        <p className="devansh group-hover/logo:-translate-x-[65px] relative transition-all duration-500 ease-nav pl-[0.3em] sm:font-medium">Devansh</p>
+                        <p className="singh-kushwah group-hover/logo:-translate-x-[65px] absolute transition-all duration-500 ease-nav left-[130px] sm:font-medium">Singh Kushwah</p>
                     </div>
                 </div>
 
-                <div className="nav flex flex-col sm:flex-row items-end sm:items-center">
+                <div className="nav flex flex-col sm:flex-row items-end sm:items-center sm:text-white sm:p-4 rounded-full">
+                {/* <div className="nav flex flex-col sm:flex-row items-end sm:items-center sm:bg-black sm:text-white sm:p-4 rounded-full"> */}
                     <Magnetic>
                         <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
-                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#about">About</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                            <a onClick={(e) => handleScroll(e, "about")} className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#about">About</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
-                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#projects">Work</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                            <a onClick={(e) => handleScroll(e, "projects")} className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#projects">Work</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className="el flex flex-col relative z-[10] p-[2px] sm:px-4 cursor-pointer group/el">
-                            <a className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#contact">Contact</a>
-                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-black rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
+                            <a onClick={(e) => handleScroll(e, "contact")} className="cursor-pointer sm:hover:font-medium transition-all duration-500" href="#contact">Contact</a>
+                            <div className="indicator hidden md:block absolute w-[5px] h-[5px] top-[30px] left-1/2 bg-white sm:bg-white rounded-[50%] scale-0 -translate-x-1/2 transition-all duration-500 ease-nav group-hover/el:scale-100"></div>
                         </div>
                     </Magnetic>
                     
@@ -114,7 +131,7 @@ export default function Header() {
                 </RoundedButton>
             </div>
             <AnimatePresence>
-                {isActive && <Nav ref={navRef} />}
+                {isActive && <Nav ref={navRef} closeNav={closeNav} />}
             </AnimatePresence>
         </>
     )

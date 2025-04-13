@@ -8,16 +8,30 @@ type NavLinkProps = {
     title: string;
     href: string;
     index: number;
+    id: string;
   };
   isActive: boolean;
+  closeNav: () => void;
   setSelectedIndicator: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const NavLink = ({
-  data, isActive, setSelectedIndicator
+  data, isActive, setSelectedIndicator, closeNav
 }: NavLinkProps) => {
 
-  const { title, href, index } = data;
+  const { title, href, index, id } = data;
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+        closeNav();
+    }
+}
 
   return (
     <motion.div
@@ -32,10 +46,10 @@ const NavLink = ({
       <motion.div
         variants={scale}
         animate={isActive ? "open" : "closed"}
-        className='indicator w-[10px] h-[10px] bg-black-100 rounded-[50%] absolute -left-[30px]'
+        className='indicator w-[10px] h-[10px] bg-accent-blue rounded-[50%] absolute -left-[30px]'
       >
       </motion.div>
-      <Link className='decoration no-underline text-black font-light' href={href}>{title}</Link>
+      <Link onClick={(e) => handleScroll(e, id)} className='decoration no-underline text-accent-blue font-light' href={href}>{title}</Link>
     </motion.div>
   )
 }
