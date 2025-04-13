@@ -1,0 +1,150 @@
+/* Base styles for text colors */
+.text-white-50 {
+    color: #d9ecff;
+}
+
+/* Timeline Styling */
+.timeline-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    left: 1.25rem;
+}
+
+/* Add media queries for different screen sizes */
+@media (min-width: 768px) {
+    .timeline-wrapper {
+        left: 1.5rem; /* 6 in tailwind units */
+    }
+}
+
+@media (min-width: 1024px) {
+    .timeline-wrapper {
+        left: 39%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .timeline-wrapper {
+        left: 35.5%;
+    }
+}
+
+/* @media (min-width: 1280px) {
+    .timeline-wrapper {
+        left: 35.5vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .timeline-wrapper {
+        left: 2.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline-wrapper {
+        left: 1.25rem;
+    }
+} */
+
+.timeline {
+    position: absolute;
+    z-index: 30;
+    height: 110%;
+    top: -2.5rem;
+    /* background-color: red; */
+    /* background-color: black; */
+}
+
+/* @media (min-width: 768px) {
+    .timeline {
+        width: 7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline {
+        width: 3.5rem;
+    }
+} */
+
+/* Gradient line for timeline */
+.gradient-line {
+    width: 2px;
+    background: linear-gradient(0deg,
+            rgba(69, 222, 196, 0) 0%,
+            #62e0ff 25%,
+            #52aeff 37.51%,
+            #fd5c79 62.83%,
+            #6d45ce 92.91%);
+}
+
+/* Timeline logo styling */
+.timeline-logo {
+    border: 1px solid #1c1c21;
+    background-color: #0e0e10;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline-logo {
+        width: 3rem;
+        height: 3rem;
+        /* width: 5rem;
+        height: 5rem; */
+        transform: translateY(-1.75rem);
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline-logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+/* Experience card wrapper */
+.exp-card-wrapper {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+}
+
+@media (min-width: 1280px) {
+    .exp-card-wrapper {
+        flex-direction: row;
+        gap: 5rem;
+    }
+}
+
+@media (max-width: 1279px) {
+    .exp-card-wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Utility classes for section layout */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-padding {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}

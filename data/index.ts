@@ -16,6 +16,54 @@ export const words = [
   { text: "Code", imgPath: "/images/code.svg" },
 ];
 
+export interface ExpCard{
+  review: string;
+  imgPath: string;
+  logoPath: string;
+  title: string;
+  date: string;
+  responsibilities: string[];
+}
+
+export const expCards: ExpCard[] = [
+  {
+    review: "Devansh was a key contributor to our team at Torus Innotech. His expertise in React and React Native, attention to detail, and problem-solving mindset brought real improvements to our platform. He’s a reliable, efficient, and collaborative developer. We were lucky to have him on the team.",
+    imgPath: "/images/exp-torus-1.png",
+    logoPath: "/images/torus-logo-1.png",
+    title: "Frontend/React Native Developer",
+    date: "January 2024 - April 2025",
+    responsibilities: [
+      "Developed and maintained user-facing features for the Hostinger website.",
+      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
+      "Optimized web applications for maximum speed and scalability.",
+    ],
+  },
+  {
+    review: "As a young developer, Devansh quickly distinguished himself with his problem-solving mindset and willingness to go the extra mile. A pleasure to work with!",
+    imgPath: "/images/exp-techie.png",
+    logoPath: "/images/techie-logo.png",
+    title: "Web/App Developer",
+    date: "November 2022 - April 2023",
+    responsibilities: [
+      "Led the development of Docker's web applications, focusing on scalability.",
+      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
+      "Contributed to open-source projects that were used with the Docker ecosystem.",
+    ],
+  },
+  // {
+  //   review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
+  //   imgPath: "/images/exp3.png",
+  //   logoPath: "/images/logo3.png",
+  //   title: "React Native Developer",
+  //   date: "March 2019 - May 2020",
+  //   responsibilities: [
+  //     "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
+  //     "Improved app performance and user experience through code optimization and testing.",
+  //     "Coordinated with the product team to implement features based on feedback.",
+  //   ],
+  // },
+];
+
 // export const gridItems = [
 //   {
 //     id: 1,

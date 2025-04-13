@@ -57,7 +57,7 @@ const About = () => {
 
                     </div>
 
-                    <div className="col-span-1 xl:row-span-3">
+                    <div className="col-span-1 xl:row-span-3 relative">
                         {/* <SpotlightCard className='bg-black-200'> */}
                         <GlowingEffect
                             spread={60}
@@ -87,7 +87,7 @@ const About = () => {
                         {/* </SpotlightCard> */}
                     </div>
 
-                    <div className="col-span-1 xl:row-span-4">
+                    <div className="col-span-1 xl:row-span-4 relative">
                         {/* <SpotlightCard className='bg-black-200'> */}
                         <GlowingEffect
                             spread={60}
@@ -130,7 +130,7 @@ const About = () => {
                         {/* </SpotlightCard> */}
                     </div>
 
-                    <div className="xl:col-span-2 xl:row-span-3">
+                    <div className="xl:col-span-2 xl:row-span-3 relative">
                         {/* <SpotlightCard className='bg-black-200'> */}
                         <GlowingEffect
                             spread={60}
@@ -160,7 +160,7 @@ const About = () => {
                         {/* </SpotlightCard> */}
                     </div>
 
-                    <div className="xl:col-span-1 xl:row-span-2">
+                    <div className="xl:col-span-1 xl:row-span-2 relative">
                         {/* <SpotlightCard className='bg-black-200'> */}
                         <GlowingEffect
                             spread={60}

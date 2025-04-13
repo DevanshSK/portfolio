@@ -4,6 +4,7 @@ import PreLoader from "@/components/preloader";
 import About from "@/components/sections/About";
 import Clients from "@/components/sections/Clients";
 import Contact from "@/components/sections/Contact";
+import Experience from "@/components/sections/experience/Experience";
 import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/Projects";
 import { AnimatePresence } from "framer-motion";
@@ -19,11 +20,11 @@ export default function Home() {
         const LocomotiveScroll = (await import('locomotive-scroll')).default
         const locomotiveScroll = new LocomotiveScroll();
 
-        setTimeout(() => {
-          setIsLoading(false);
-          document.body.style.cursor = "default";
-          window.scrollTo(0, 0);
-        }, 2000);
+        // setTimeout(() => {
+        //   setIsLoading(false);
+        //   document.body.style.cursor = "default";
+        //   window.scrollTo(0, 0);
+        // }, 2000);
       }
     )()
   }, []);
@@ -31,11 +32,12 @@ export default function Home() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && <PreLoader />}
+        {/* {isLoading && <PreLoader />} */}
       </AnimatePresence>
       {/* <main className="relative overflow-hidden flex justify-center items-center flex-col mx-auto"> */}
       <main className="relative overflow-hidden">
         <Hero />
+        {/* <Experience /> */}
         <div className="max-w-7xl mx-auto">
           <About />
           <Projects />
