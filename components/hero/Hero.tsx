@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="relative flex-1">
                 
                 <MobileRight />
-                <div className=" w-full h-full z-0 flex items-center justify-center rounded-3xl overflow-hidden">
+                <div className=" w-full h-[calc(100vh-96px)] sm:h-full z-0 flex items-center justify-center rounded-3xl overflow-hidden">
                     <IridescenceBg
                         color={[0, 1, 1]}
                         mouseReact={true}

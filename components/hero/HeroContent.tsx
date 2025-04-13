@@ -7,7 +7,7 @@ import Button from '@/components/common/cta-button/Button'
 const HeroContent = () => {
     return (
         <>
-            <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[75%] sm:w-[60%] rounded-tr-3xl md:w-[60%] lg:w-[750px] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-5 pr-0 flex flex-col gap-7'>
+            <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[80%] sm:w-[60%] rounded-tr-3xl md:w-[60%] lg:w-[750px] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-0 sm:px-5 pr-0 flex flex-col gap-7'>
             {/* <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[75%] sm:w-[60%] rounded-tr-3xl md:w-[70%] lg:w-[60%] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-5 pr-0 flex flex-col gap-7'> */}
             {/* <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[75%] sm:w-[60%] rounded-tr-3xl md:w-1/2 lg:w-[60%] lg:max-w-2xl absolute bottom-0 left-0 p-8 px-5 pr-0 flex flex-col gap-7'> */}
                 <div className="hero-text flex flex-col justify-center lg:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none">
@@ -55,7 +55,7 @@ const HeroContent = () => {
             </div>
             {/* <div className="corner absolute bottom-[60%] sm:bottom-1/2 lg:bottom-[54.5%] left-0 z-10 -rotate-90"></div> */}
             <div className="corner absolute bottom-[60%] sm:bottom-1/2 left-0 z-10 -rotate-90 translate-y-[1px]"></div>
-            <div className="corner absolute bottom-0 left-3/4 sm:left-[60%] md:left-[60%] lg:left-[750px] z-10 -rotate-90"></div>
+            <div className="corner absolute bottom-0 left-[80%] sm:left-[60%] md:left-[60%] lg:left-[750px] z-10 -rotate-90"></div>
             {/* <div className="corner absolute bottom-0 left-3/4 sm:left-[60%] md:left-[60%] lg:left-[min(60%,42rem)] z-10 -rotate-90"></div> */}
         </>
     )
