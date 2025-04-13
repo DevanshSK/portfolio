@@ -3,6 +3,8 @@ import Image from 'next/image'
 import React, { useCallback, useState } from 'react'
 import Globe from "react-globe.gl";
 import Button from '../common/cta-button/Button';
+// import SpotlightCard from '../common/spotlight-card/SpotlightCard';
+import { GlowingEffect } from '../common/glowing-card/GlowingCard';
 // import Button from '../elements/Button';
 
 const About = () => {
@@ -25,7 +27,16 @@ const About = () => {
                 {/* <section className='c-space mt-20 mb-20' > */}
                 <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
 
-                    <div className="col-span-1 xl:row-span-3">
+                    <div className="col-span-1 xl:row-span-3 relative">
+                        <GlowingEffect
+                            spread={60}
+                            glow={true}
+                            disabled={false}
+                            proximity={150}
+                            inactiveZone={0.01}
+                            className='rounded-lg'
+                        />
+                        {/* <SpotlightCard className='bg-black-200'> */}
                         <div className="grid-container">
                             <div className="relative w-full sm:h-[276px] h-[200px]">
                                 <Image
@@ -42,9 +53,20 @@ const About = () => {
                                 {/* <p className="grid-subtext">Digital architect who transforms caffeine into code. I craft pixel-perfect frontends and bulletproof backends with equal passion, turning &apos;impossible&apos; requirements into elegant solutions that users never want to close.</p> */}
                             </div>
                         </div>
+                        {/* </SpotlightCard> */}
+
                     </div>
 
                     <div className="col-span-1 xl:row-span-3">
+                        {/* <SpotlightCard className='bg-black-200'> */}
+                        <GlowingEffect
+                            spread={60}
+                            glow={true}
+                            disabled={false}
+                            proximity={150}
+                            inactiveZone={0.01}
+                            className='rounded-lg'
+                        />
                         <div className="grid-container">
                             <div className="relative w-full sm:h-[276px] h-[200px]">
                                 <Image
@@ -62,9 +84,19 @@ const About = () => {
                                 {/* <p className='grid-subtext'>I specialize in building robust and scalable applications using MERN, Next.js, Spring Boot with Java, and React Native.</p> */}
                             </div>
                         </div>
+                        {/* </SpotlightCard> */}
                     </div>
 
                     <div className="col-span-1 xl:row-span-4">
+                        {/* <SpotlightCard className='bg-black-200'> */}
+                        <GlowingEffect
+                            spread={60}
+                            glow={true}
+                            disabled={false}
+                            proximity={150}
+                            inactiveZone={0.01}
+                            className='rounded-lg'
+                        />
                         <div className="grid-container">
                             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
                                 <Globe
@@ -95,9 +127,19 @@ const About = () => {
                                 />
                             </div>
                         </div>
+                        {/* </SpotlightCard> */}
                     </div>
 
                     <div className="xl:col-span-2 xl:row-span-3">
+                        {/* <SpotlightCard className='bg-black-200'> */}
+                        <GlowingEffect
+                            spread={60}
+                            glow={true}
+                            disabled={false}
+                            proximity={150}
+                            inactiveZone={0.01}
+                            className='rounded-lg'
+                        />
                         <div className="grid-container">
                             <div className="relative w-full sm:h-[266px] h-[200px]">
                                 <Image
@@ -115,9 +157,19 @@ const About = () => {
                                 </p>
                             </div>
                         </div>
+                        {/* </SpotlightCard> */}
                     </div>
 
                     <div className="xl:col-span-1 xl:row-span-2">
+                        {/* <SpotlightCard className='bg-black-200'> */}
+                        <GlowingEffect
+                            spread={60}
+                            glow={true}
+                            disabled={false}
+                            proximity={150}
+                            inactiveZone={0.01}
+                            className='rounded-lg'
+                        />
                         <div className="grid-container">
                             <div className="relative w-full md:h-[126px] sm:h-[276px] h-[200px]">
                                 <Image
@@ -144,6 +196,7 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
+                        {/* </SpotlightCard> */}
                     </div>
                 </div>
             </section>
