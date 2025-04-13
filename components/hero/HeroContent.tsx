@@ -50,7 +50,7 @@ const HeroContent = () => {
                 <Button
                     text="See My Work"
                     className="md:w-80 md:h-16 w-60 h-12"
-                    id="counter"
+                    id="about"
                 />
             </div>
             {/* <div className="corner absolute bottom-[60%] sm:bottom-1/2 lg:bottom-[54.5%] left-0 z-10 -rotate-90"></div> */}
