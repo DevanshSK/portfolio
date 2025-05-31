@@ -64,6 +64,19 @@ const Contact = () => {
 
     }
 
+    return (
+        <section className='c-space my-20' id="contact">
+            <TitleHeader
+                title="Get in Touch – Let’s Connect"
+                sub="💬 Have questions or ideas? Let’s talk! 🚀"
+            />
+
+            <div className="bg-background border mt-10 flex items-center justify-center aspect-video p-10">
+                CONTACT FORM
+            </div>
+        </section>
+    )
+
 
     return (
         <section className='c-space my-20' id="contact">
@@ -71,7 +84,8 @@ const Contact = () => {
                 title="Get in Touch – Let’s Connect"
                 sub="💬 Have questions or ideas? Let’s talk! 🚀"
             />
-            <div className="relative min-h-screen flex items-center flex-col">
+
+            <div className="relative min-h-screen flex items-center flex-col mt-10">
                 <img
                     src="/assets/terminal.png"
                     alt="Terminal bg"
