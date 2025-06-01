@@ -24,7 +24,7 @@ export default function Header() {
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
         const element = document.getElementById(targetId);
-        console.log("Element clicked")
+        // console.log("Element clicked")
         if(element){
             element.scrollIntoView({
                 behavior: "smooth",

@@ -78,7 +78,7 @@ const Clients = () => {
   ];
 
   return (
-    <section className="c-space mt-20 pb-10">
+    <section className="c-space mt-20 pb-32">
       {/* <h3 className="head-text">Hear from My Clients</h3> */}
       <TitleHeader
         title='What People Say About Me?'

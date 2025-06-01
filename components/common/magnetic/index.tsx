@@ -8,7 +8,7 @@ const Magnetic = ({ children }: {
     const magnetic = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        console.log(children);
+        // console.log(children);
         const xTo = gsap.quickTo(magnetic.current, "x", {duration: 1, ease: "elastic.out(1, 0.3)"})
         const yTo = gsap.quickTo(magnetic.current, "y", {duration: 1, ease: "elastic.out(1, 0.3)"})
 

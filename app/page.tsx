@@ -5,14 +5,35 @@ import About from "@/components/sections/About";
 import Clients from "@/components/sections/Clients";
 import Contact from "@/components/sections/Contact";
 // import Experience from "@/components/sections/experience/Experience";
-import Footer from "@/components/sections/Footer";
+// import Footer from "@/components/sections/Footer";
 import Projects from "@/components/sections/Projects";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+// import Lenis from 'lenis';
 
 export default function Home() {
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // useEffect( () => {
+
+  //   const lenis = new Lenis()
+
+
+  //   function raf(time: number) {
+
+  //     lenis.raf(time)
+
+  //     requestAnimationFrame(raf)
+
+  //   }
+
+
+
+
+  //   requestAnimationFrame(raf)
+
+  // }, [])
 
   useEffect(() => {
     (
@@ -42,18 +63,9 @@ export default function Home() {
           <About />
           <Projects />
           <Clients />
-          <Contact />
-          <Footer />
         </div>
+        <Contact />
 
-        {/* <FuzzyOverlay /> */}
-        {/* <ClickSpark
-          sparkColor='#fff'
-          sparkSize={10}
-          sparkRadius={15}
-          sparkCount={8}
-          duration={400}
-        /> */}
       </main>
     </>
   );
