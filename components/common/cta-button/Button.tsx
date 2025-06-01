@@ -5,13 +5,19 @@ interface Props {
     text: string;
     className: string;
     id: string;
+    onClick?: () => void;
 }
 
-const Button = ({ text, className, id, }: Props) => {
+const Button = ({ text, className, id, onClick }: Props) => {
     return (
         <a
             onClick={(e) => {
                 e.preventDefault(); // Stop the link from jumping instantly
+
+                if(onClick){
+                    onClick();
+                    return;
+                }
 
                 const target = document.getElementById(id); // Find the section with ID "counter"
 

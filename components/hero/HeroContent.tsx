@@ -1,13 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
+"use client"
 import React from 'react'
 import { words } from '@/data'
 import Button from '@/components/common/cta-button/Button'
+import { useRouter } from 'next/navigation'
 
 const HeroContent = () => {
+    const router = useRouter();
+    const handleViewResume = () => {
+        console.log("Viewing Resume")
+        window.open("https://drive.google.com/file/d/1-E5LFvFOVm63F-j0Jrv0MJBHc0draCat/view?usp=sharing")
+    }
+
     return (
         <>
-            {/* <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[80%] sm:w-[60%] rounded-tr-3xl md:w-[60%] lg:w-[750px] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-0 sm:px-5 pr-0 flex flex-col gap-7'> */}
-            {/* <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[80%] sm:w-[60%] rounded-tr-3xl md:w-[65%] lg:w-[750px] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-0 sm:px-5 pr-0 flex flex-col gap-7'> */}
             <div className='bg-black z-0 min-h-[60%] sm:min-h-[50%] w-[80%] sm:w-[60%] rounded-tr-3xl md:w-[65%] lg:w-[750px] md:max-w-[750px] absolute bottom-0 left-0 p-8 px-0 sm:px-5 pr-0 '>
                 <div className="hero-wrapper flex flex-col gap-7">
 
@@ -49,9 +55,10 @@ const HeroContent = () => {
                         {/* {"Full-stack developer who delivers. Let's create something amazing together."} */}
                     </p>
                     <Button
-                        text="See My Work"
+                        text="View Resume"
                         className="md:w-80 md:h-16 w-60 h-12"
-                        id="about"
+                        id="resume"
+                        onClick={handleViewResume}
                     />
                 </div>
                 {/* <div className="corner absolute bottom-[60%] sm:bottom-1/2 lg:bottom-[54.5%] left-0 z-10 -rotate-90"></div> */}
