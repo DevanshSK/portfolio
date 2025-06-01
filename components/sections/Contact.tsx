@@ -177,7 +177,7 @@ const Contact = () => {
                         </div>
 
                         <footer className="mt-10 sm:mt-16 pt-6 pb-6 border-t border-white gap-3 sm:gap-5 flex justify-center md:justify-between items-center flex-wrap">
-                            <p className="text-xs text-center sm:text-left sm:text-base">© 2024 Devansh Singh Kushwah. All rights reserved.</p>
+                            <p className="text-xs text-center sm:text-left sm:text-base">© {new Date().getFullYear()} Devansh Singh Kushwah. All rights reserved.</p>
 
                             <div className="flex gap-3">
                                 <Link className='text-xs sm:text-base' target="_blank" href="https://github.com/DevanshSK">GitHub</Link>
