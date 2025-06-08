@@ -2,10 +2,10 @@
 import Image from 'next/image'
 import { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
-import TitleHeader from '../common/title-header';
 import Silk from '../common/backgrounds/Silk';
 import Link from 'next/link';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import toast from 'react-hot-toast';
+import { LoaderCircle } from 'lucide-react';
 
 interface FormType {
     name: string;
@@ -46,7 +46,8 @@ const Contact = () => {
             );
 
             setLoading(false);
-            alert("Your message is sent");
+            // alert("Your message is sent");
+            toast.success("Message sent successfully.")
             setForm({
                 email: "",
                 name: "",
@@ -55,7 +56,8 @@ const Contact = () => {
         } catch (error) {
             setLoading(false);
             console.log(error);
-            alert("Something went wrong.")
+            // alert("Something went wrong.")
+            toast.error("Something went wrong.");
             setForm({
                 email: "",
                 name: "",
@@ -84,7 +86,9 @@ const Contact = () => {
                             scale={.5}
                             // color="#007575"
                             // color="#00fcfe"
-                            color="#00bfbf"
+                            // color="#00bfbf"
+
+                            color="#00fcfe"
                             noiseIntensity={1}
                             rotation={1.63}
                         />
@@ -153,14 +157,14 @@ const Contact = () => {
 
                                     <button className='field-btn' type='submit' disabled={loading}>
                                         {loading ? "Sending..." : "Send Message"}
-                                        {/* <img src="/assets/arrow-up.png" alt="Arrow-up" className='field-btn_arrow' /> */}
-                                        <Image
-                                            src="/assets/arrow-up.png" alt="Arrow-up"
-                                            width={16}
-                                            height={16}
-
-                                            className='field-btn_arrow'
-                                        />
+                                        {loading ? (<LoaderCircle className='w-4 h-4 animate-spin font-bold' />) : (
+                                            <Image
+                                                src="/assets/arrow-up.png" alt="Arrow-up"
+                                                width={16}
+                                                height={16}
+                                                className='field-btn_arrow'
+                                            />
+                                        )}
                                     </button>
                                 </form>
                                 <div className='hidden  flex-col flex-1 justify-start mt-10 gap-5'>

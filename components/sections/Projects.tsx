@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import TitleHeader from "../common/title-header";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,10 +70,15 @@ const Projects = () => {
                                 {/* <img className="w-full h-full object-cover rounded-xl absolute inset-0" src="/images/react-native-jobs.png" alt="Intervu Platform" /> */}
                             </div>
                             <div className="text-content space-y-5 mt-5">
-                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                                    {"InterVu: Conducting Interviews Made Simple with a Powerful, User-Friendly Appcalled InterVu"}
-                                    {/* {"Conducting Interviews Made Simple with a Powerful, User-Friendly Appcalled InterVu"} */}
-                                </h2>
+                                <Link
+                                    href={"https://github.com/DevanshSK/InterVu"}
+                                    target="_blank"
+                                >
+                                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+                                        {"InterVu: Conducting Interviews Made Simple with a Powerful, User-Friendly Appcalled InterVu"}
+                                        {/* {"Conducting Interviews Made Simple with a Powerful, User-Friendly Appcalled InterVu"} */}
+                                    </h2>
+                                </Link>
                                 <p className="text-white-50 md:text-xl">
                                     A powerful, user-Friendly interview platform built with NextJS, Convex, Stream, & Clerk for a fast and smooth interview experience.
                                 </p>
@@ -89,14 +95,18 @@ const Projects = () => {
                                         alt="ADD Learn mockup"
                                     />
                                 </div>
-                                <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">ADD Learn - An Online E-Learning Platform</h2>
+                                <Link href={"https://github.com/DevanshSK/add-learn"} target="_blank">
+                                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">ADD Learn - An Online E-Learning Platform</h2>
+                                </Link>
                             </div>
 
                             <div className="project" ref={ycDirectoryRef}>
                                 <div className="image-wrapper xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0 bg-[#FFE7EB]">
                                     <img className="w-full h-full object-contain rounded-xl" src="/images/add-trends-mockup.png" alt="ADD Trends Mockup" />
                                 </div>
-                                <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">ADD Trends - A Clothing Ecommerce App</h2>
+                                <Link href={"https://github.com/DevanshSK/ADD-Trends-Complete"} target="_blank">
+                                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mt-5">ADD Trends - A Clothing Ecommerce App</h2>
+                                </Link>
                             </div>
                         </div>
 
