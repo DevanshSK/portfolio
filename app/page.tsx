@@ -64,12 +64,12 @@ export default function Home() {
             </AnimatePresence>
             <main className="relative overflow-hidden">
                 <Hero />
-                {/* <div className="max-w-7xl mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <About />
                     <Projects />
                     <Clients />
                 </div>
-                <Contact /> */}
+                <Contact />
 
             </main>
         </>
