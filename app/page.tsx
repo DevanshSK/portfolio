@@ -1,17 +1,37 @@
 "use client";
 import Hero from "@/components/hero/Hero";
+import dynamic from 'next/dynamic'
+
+const About = dynamic(
+    () => import('@/components/sections/About'),
+    { ssr: false }
+)
+const Projects = dynamic(
+    () => import('@/components/sections/Projects'),
+    { ssr: false }
+)
+const Clients = dynamic(
+    () => import('@/components/sections/Clients'),
+    { ssr: false }
+)
+const Contact = dynamic(
+    () => import('@/components/sections/Contact'),
+    { ssr: false }
+)
+
+
+// import About from "@/components/sections/About";
+// import Projects from "@/components/sections/Projects";
+// import Clients from "@/components/sections/Clients";
+// import Contact from "@/components/sections/Contact";
+
+
+
 import PreLoader from "@/components/preloader";
-import About from "@/components/sections/About";
-import Clients from "@/components/sections/Clients";
-import Contact from "@/components/sections/Contact";
-// import Experience from "@/components/sections/experience/Experience";
-// import Footer from "@/components/sections/Footer";
-import Projects from "@/components/sections/Projects";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-// import Lenis from 'lenis';
 
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 
 export default function Home() {
 
